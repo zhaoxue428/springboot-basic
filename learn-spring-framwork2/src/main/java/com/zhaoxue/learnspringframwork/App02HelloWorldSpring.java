@@ -18,8 +18,15 @@ public class App02HelloWorldSpring {
 		// 两种从spring上下文检索bean的方法：通过bean名称 or 使用bean的类型来检索它
 		System.out.println(context.getBean("address2"));
 
-		// 如果有多个匹配的bean，spring应该选择哪一个
-//		System.out.println(context.getBean(Address.class));
+		// 如果有多个匹配的bean，编译会报错，spring不知道应该选择哪一个?方法是设置：@Primary，来指示哪个最重要
+		System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean(Person.class));
+		System.out.println(context.getBean("person5Qualifier"));
+		// print all name of beans 列出spring框架管理的所有bean的方式
+//		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		;
+	
+		
 	}
 
 }
