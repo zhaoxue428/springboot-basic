@@ -15,7 +15,6 @@ public class GamingAppLauncherApplication {
 
 		try (var context = new AnnotationConfigApplicationContext(GamingAppLauncherApplication.class)) {
 			context.getBean(GamingConsole.class).up();
-
 			context.getBean(GameRunner.class).run();
 		}
 

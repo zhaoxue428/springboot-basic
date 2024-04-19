@@ -1,10 +1,12 @@
 package com.zhaoxue.learnspringframwork.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.zhaoxue.learnspringframwork.GamingConsole;
 
 @Component
+@Qualifier("SuperContraGameQualifier")
 public class SuperContraGame implements GamingConsole {
 
 	@Override
